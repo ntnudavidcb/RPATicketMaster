@@ -711,7 +711,7 @@
         </ActivityAction>
       </Catch>
     </TryCatch.Catches>
-    <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
   </TryCatch>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -751,7 +751,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="LogMessage_41" sap:VirtualizedContainerService.HintSize="314,91" />
-      <sap2010:ViewStateData Id="Sequence_408" sap:VirtualizedContainerService.HintSize="849,198">
+      <sap2010:ViewStateData Id="Sequence_408" sap:VirtualizedContainerService.HintSize="849.6,208.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1072,11 +1072,11 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="State_5" sap:VirtualizedContainerService.HintSize="253,178">
+      <sap2010:ViewStateData Id="State_5" sap:VirtualizedContainerService.HintSize="252.8,184.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">233.5,501</av:Point>
-            <av:Size x:Key="ShapeSize">253,178</av:Size>
+            <av:Size x:Key="ShapeSize">252.8,184.8</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Double x:Key="StateContainerWidth">239</x:Double>
             <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -1087,7 +1087,7 @@
       <sap2010:ViewStateData Id="Transition_13" sap:VirtualizedContainerService.HintSize="430,562">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">170,436.5 170,572.2 233.5,572.2</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">169.8,460.5 169.8,574.92 233.5,574.92</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">29</x:Int32>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1172,7 +1172,7 @@
       <sap2010:ViewStateData Id="Transition_14" sap:VirtualizedContainerService.HintSize="430,945">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">478,393.8 448,393.8 448,407.1 283,407.1</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">478,400.36 448,400.36 448,427.5 282.6,427.5</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">61</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">64</x:Int32>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1211,7 +1211,7 @@
       <sap2010:ViewStateData Id="Transition_15" sap:VirtualizedContainerService.HintSize="1518,932">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">600,432 600,572.2 486.5,572.2</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">600.4,440.2 600.4,574.92 486.3,574.92</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">28</x:Int32>
           </scg:Dictionary>
@@ -1237,7 +1237,7 @@
       <sap2010:ViewStateData Id="Transition_16" sap:VirtualizedContainerService.HintSize="571,803">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">478,346.05 448,346.05 448,377.7 283,377.7</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">478,350.56 448,350.56 448,394.5 282.6,394.5</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">41</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">52</x:Int32>
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1296,18 +1296,18 @@
       <sap2010:ViewStateData Id="Transition_17" sap:VirtualizedContainerService.HintSize="1532,1271">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">600,241 600,161.9 471,161.9</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">600,241 600,178.54 470.6,178.54</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">38</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">60</x:Int32>
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="State_6" sap:VirtualizedContainerService.HintSize="244,191">
+      <sap2010:ViewStateData Id="State_6" sap:VirtualizedContainerService.HintSize="244.8,199.2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">478,241</av:Point>
-            <av:Size x:Key="ShapeSize">244,191</av:Size>
+            <av:Size x:Key="ShapeSize">244.8,199.2</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Double x:Key="StateContainerWidth">230</x:Double>
             <x:Double x:Key="StateContainerHeight">38</x:Double>
@@ -1318,7 +1318,7 @@
       <sap2010:ViewStateData Id="Transition_18" sap:VirtualizedContainerService.HintSize="430,505">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">283,318.9 313,318.9 313,307.85 478,307.85</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">282.6,328.5 312.6,328.5 312.6,310.72 478,310.72</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">28</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">25</x:Int32>
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1329,17 +1329,17 @@
       <sap2010:ViewStateData Id="Transition_19" sap:VirtualizedContainerService.HintSize="430,512">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">79.6,436.5 79.6,643.4 233.5,643.4</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">79.56,460.5 79.56,648.84 233.5,648.84</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">7</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">61</x:Int32>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="State_7" sap:VirtualizedContainerService.HintSize="226,196">
+      <sap2010:ViewStateData Id="State_7" sap:VirtualizedContainerService.HintSize="225.6,220">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">57,240.5</av:Point>
-            <av:Size x:Key="ShapeSize">226,196</av:Size>
+            <av:Size x:Key="ShapeSize">225.6,220</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Double x:Key="StateContainerWidth">211.63823544496523</x:Double>
             <x:Double x:Key="StateContainerHeight">43.302180942042014</x:Double>
@@ -1360,7 +1360,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Int32 x:Key="SrcConnectionPointIndex">61</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
-            <av:PointCollection x:Key="ConnectorLocation">229,161.9 170,161.9 170,240.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">229,178.54 169.8,178.54 169.8,240.5</av:PointCollection>
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -1376,7 +1376,7 @@
       <sap2010:ViewStateData Id="Transition_21" sap:VirtualizedContainerService.HintSize="743,1235">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">471,87.9 741,87.9 741,643.4 486.5,643.4</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">470.6,94.14 740.6,94.14 740.6,648.84 486.3,648.84</av:PointCollection>
             <x:Int32 x:Key="SrcConnectionPointIndex">20</x:Int32>
             <x:Int32 x:Key="DestConnectionPointIndex">60</x:Int32>
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1394,11 +1394,11 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="State_8" sap:VirtualizedContainerService.HintSize="444,1252">
+      <sap2010:ViewStateData Id="State_8" sap:VirtualizedContainerService.HintSize="241.6,168.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">229,43.5</av:Point>
-            <av:Size x:Key="ShapeSize">242,148</av:Size>
+            <av:Size x:Key="ShapeSize">241.6,168.8</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Double x:Key="StateContainerWidth">228</x:Double>
             <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -1406,14 +1406,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="StateMachine_2" sap:VirtualizedContainerService.HintSize="849,845">
+      <sap2010:ViewStateData Id="StateMachine_2" sap:VirtualizedContainerService.HintSize="849.6,850.4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <av:Point x:Key="ShapeLocation">40,52.5</av:Point>
             <x:Double x:Key="StateContainerWidth">835</x:Double>
             <x:Double x:Key="StateContainerHeight">722</x:Double>
-            <av:PointCollection x:Key="ConnectorLocation">100,82.5 130,82.5 130,80.5 229,80.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">100,82.58 130,82.58 130,85.7 229,85.7</av:PointCollection>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
@@ -1443,7 +1443,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_391" sap:VirtualizedContainerService.HintSize="871,1400">
+      <sap2010:ViewStateData Id="Sequence_391" sap:VirtualizedContainerService.HintSize="872,1416">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1483,14 +1483,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TryCatch_43" sap:VirtualizedContainerService.HintSize="889,1654">
+      <sap2010:ViewStateData Id="TryCatch_43" sap:VirtualizedContainerService.HintSize="889.6,1674.4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main2_1" sap:VirtualizedContainerService.HintSize="929,1734" />
+      <sap2010:ViewStateData Id="Main2_1" sap:VirtualizedContainerService.HintSize="929.6,1754.4" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
