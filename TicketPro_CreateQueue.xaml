@@ -74,13 +74,14 @@
       <Variable x:TypeArguments="scg:List(x:String)" Name="UniqueNameList" />
       <Variable x:TypeArguments="x:String" Name="DepartmentName" />
     </Sequence.Variables>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_Navigate.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Navigate file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_Navigate.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Department">[in_Department]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_MenuItem">queue</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[in_Department]" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="Starting to create queue" />
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch Set correct department name" Expression="[in_Department]" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Assign x:Key="1" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[DepartmentName]</OutArgument>
@@ -114,6 +115,7 @@
         <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)]</InArgument>
       </Assign.Value>
     </Assign>
+    <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="Extracting data tables" />
     <Sequence DisplayName="Data scraping" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
@@ -151,6 +153,7 @@
           </ActivityAction>
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
+      <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="First data table extracted" />
     </Sequence>
     <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe TicketPRO'" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="044153488163191c884aa24f267d0dd5" Selector="&lt;html app='chrome.exe' title='TicketPRO 2000' /&gt;">
       <ui:BrowserScope.Body>
@@ -201,6 +204,7 @@
           </ActivityAction>
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
+      <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="Second data table extracted" />
     </Sequence>
     <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
@@ -226,16 +230,19 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <sads:DebugSymbol.Symbol>d01DOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9fQ3JlYXRlUXVldWUueGFtbEYBdAF2AQJHA+YBDgIBAU0FUh0CAVFTBWwOAgFCbQV0DgIBPnUFmgEQAgEpmwEFpgEXAgEkpwEFzAEQAgEPzQEF1AEOAgEL1QEF5AESAgECUERQSQIBVU9FT1QCAVNNsQFN1AECAVJTR1NYAgFDVAdbEAIBTVwHYxACAUlkB2sQAgFFcjpyTwIBQW87b0UCAT93OndXAgEqeQeZARkCASubAaYCmwHeAgIBKKEBC6MBFgIBJakBOqkBVwIBEKsBB8sBGQIBEdIBOtIBVgIBDs8BO88BSwIBDNUBeNUBigECAQnbAQvhARYCAQNZMlk5AgFQVjNWQwIBTmEyYToCAUxeM15DAgFKaTJpOgIBSGYzZkMCAUZ5ogJ52gICAT1/DZYBGAIBLKIBDaIBpgECASarAaICqwHaAgIBI7EBDcgBGAIBEtwBDeABHwIBBIABD4QBIAIBNYUBD5UBHwIBLaIBfKIBowECASeyAQ+2ASACARu3AQ/HAR8CARPcAbsB3AHkAQIBB94BRd4BVAIBBYAB0QKAAdQCAgE8ggGiAYIBwQECATuAAYUBgAGKAQIBOoABS4ABUQIBOYABXIABcAIBN4AByQGAAY0CAgE2hQEohQE8AgEziwEVkgEgAgEusgHRArIB1AICASK0AaIBtAHBAQIBIbIBhQGyAYoBAgEgsgFLsgFRAgEfsgFcsgFwAgEdsgHJAbIBjQICARy3ASi3ATwCARm9ARXEASACARSMAReRASYCAS++ARfDASYCARWOAUyOAVYCATGQAUCQAVwCATDAAUzAAVYCARfCAUDCAVwCARY=</sads:DebugSymbol.Symbol>
+    <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="Queue succesfully created" />
+    <sads:DebugSymbol.Symbol>d01DOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9fQ3JlYXRlUXVldWUueGFtbFABdAF2AQJHA+sBDgIBAU0FUh0CAVtTBVOPAQIBWVQFbQ4CAUpuBXUOAgFGdgV2jgECAUR3BZ0BEAIBLZ4BBakBFwIBKKoBBdABEAIBEdEBBdgBDgIBDdkBBegBEgIBBOkBBekBkAECAQJQRFBJAgFfT0VPVAIBXU2xAU3UAQIBXFNyU4wBAgFaVGNUdAIBS1UHXBACAVVdB2QQAgFRZQdsEAIBTXM6c08CAUlwO3BFAgFHdnN2iwECAUV5OnlXAgEuewebARkCATGcAQecAZQBAgEvngGmAp4B3gICASykAQumARYCASmsATqsAVcCARKuAQfOARkCARXPAQfPAZUBAgET1gE61gFWAgEQ0wE70wFLAgEO2QF42QGKAQIBC98BC+UBFgIBBekBcukBjQECAQNaMlo5AgFYVzNXQwIBVmIyYjoCAVRfM19DAgFSajJqOgIBUGczZ0MCAU57ogJ72gICAUOBAQ2YARgCATKcAXWcAZEBAgEwpQENpQGmAQIBKq4BogKuAdoCAgEntAENywEYAgEWzwF1zwGSAQIBFOABDeQBHwIBBoIBD4YBIAIBO4cBD5cBHwIBM6UBfKUBowECASu1AQ+5ASACAR+6AQ/KAR8CARfgAbsB4AHkAQIBCeIBReIBVAIBB4IB0QKCAdQCAgFChAGiAYQBwQECAUGCAYUBggGKAQIBQIIBS4IBUQIBP4IBXIIBcAIBPYIByQGCAY0CAgE8hwEohwE8AgE5jQEVlAEgAgE0tQHRArUB1AICASa3AaIBtwHBAQIBJbUBhQG1AYoBAgEktQFLtQFRAgEjtQFctQFwAgEhtQHJAbUBjQICASC6ASi6ATwCAR3AARXHASACARiOAReTASYCATXBARfGASYCARmQAUyQAVYCATeSAUCSAVwCATbDAUzDAVYCARvFAUDFAVwCARo=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="476.8,92.8" />
       <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
       <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
       <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
-      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476.8,188.8" />
+      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476.8,296" />
       <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="476.8,60.8" />
+      <sap2010:ViewStateData Id="LogMessage_2" sap:VirtualizedContainerService.HintSize="476.8,92.8" />
       <sap2010:ViewStateData Id="ExtractData_1" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
       <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="217.6,134.4" />
       <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="240,259.2">
@@ -254,7 +261,8 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="414.4,827.2" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="476.8,952">
+      <sap2010:ViewStateData Id="LogMessage_3" sap:VirtualizedContainerService.HintSize="414.4,92.8" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="476.8,1084.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -288,7 +296,8 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="BrowserScope_2" sap:VirtualizedContainerService.HintSize="414.4,827.2" />
-      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="476.8,952">
+      <sap2010:ViewStateData Id="LogMessage_4" sap:VirtualizedContainerService.HintSize="414.4,92.8" />
+      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="476.8,1084.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -305,7 +314,8 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="476.8,281.6" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="499.2,3460">
+      <sap2010:ViewStateData Id="LogMessage_5" sap:VirtualizedContainerService.HintSize="476.8,92.8" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="499.2,4231.2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -313,7 +323,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TicketPro_CreateQueue_1" sap:VirtualizedContainerService.HintSize="539.2,3900" />
+      <sap2010:ViewStateData Id="TicketPro_CreateQueue_1" sap:VirtualizedContainerService.HintSize="539.2,4311.2" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
