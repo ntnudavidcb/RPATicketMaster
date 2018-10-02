@@ -231,7 +231,7 @@
       </ui:ForEach.Body>
     </ui:ForEach>
     <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="Queue succesfully created" />
-    <sads:DebugSymbol.Symbol>d01DOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9fQ3JlYXRlUXVldWUueGFtbFABdAF2AQJHA+sBDgIBAU0FUh0CAVtTBVOPAQIBWVQFbQ4CAUpuBXUOAgFGdgV2jgECAUR3BZ0BEAIBLZ4BBakBFwIBKKoBBdABEAIBEdEBBdgBDgIBDdkBBegBEgIBBOkBBekBkAECAQJQRFBJAgFfT0VPVAIBXU2xAU3UAQIBXFNyU4wBAgFaVGNUdAIBS1UHXBACAVVdB2QQAgFRZQdsEAIBTXM6c08CAUlwO3BFAgFHdnN2iwECAUV5OnlXAgEuewebARkCATGcAQecAZQBAgEvngGmAp4B3gICASykAQumARYCASmsATqsAVcCARKuAQfOARkCARXPAQfPAZUBAgET1gE61gFWAgEQ0wE70wFLAgEO2QF42QGKAQIBC98BC+UBFgIBBekBcukBjQECAQNaMlo5AgFYVzNXQwIBVmIyYjoCAVRfM19DAgFSajJqOgIBUGczZ0MCAU57ogJ72gICAUOBAQ2YARgCATKcAXWcAZEBAgEwpQENpQGmAQIBKq4BogKuAdoCAgEntAENywEYAgEWzwF1zwGSAQIBFOABDeQBHwIBBoIBD4YBIAIBO4cBD5cBHwIBM6UBfKUBowECASu1AQ+5ASACAR+6AQ/KAR8CARfgAbsB4AHkAQIBCeIBReIBVAIBB4IB0QKCAdQCAgFChAGiAYQBwQECAUGCAYUBggGKAQIBQIIBS4IBUQIBP4IBXIIBcAIBPYIByQGCAY0CAgE8hwEohwE8AgE5jQEVlAEgAgE0tQHRArUB1AICASa3AaIBtwHBAQIBJbUBhQG1AYoBAgEktQFLtQFRAgEjtQFctQFwAgEhtQHJAbUBjQICASC6ASi6ATwCAR3AARXHASACARiOAReTASYCATXBARfGASYCARmQAUyQAVYCATeSAUCSAVwCATbDAUzDAVYCARvFAUDFAVwCARo=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1dDOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX0NyZWF0ZVF1ZXVlLnhhbWxQAXQBdgECRwPrAQ4CAQFNBVIdAgFbUwVTjwECAVlUBW0OAgFKbgV1DgIBRnYFdo4BAgFEdwWdARACAS2eAQWpARcCASiqAQXQARACARHRAQXYAQ4CAQ3ZAQXoARICAQTpAQXpAZABAgECUERQSQIBX09FT1QCAV1NsQFN1AECAVxTclOMAQIBWlRjVHQCAUtVB1wQAgFVXQdkEAIBUWUHbBACAU1zOnNPAgFJcDtwRQIBR3ZzdosBAgFFeTp5VwIBLnsHmwEZAgExnAEHnAGUAQIBL54BpgKeAd4CAgEspAELpgEWAgEprAE6rAFXAgESrgEHzgEZAgEVzwEHzwGVAQIBE9YBOtYBVgIBENMBO9MBSwIBDtkBeNkBigECAQvfAQvlARYCAQXpAXLpAY0BAgEDWjJaOQIBWFczV0MCAVZiMmI6AgFUXzNfQwIBUmoyajoCAVBnM2dDAgFOe6ICe9oCAgFDgQENmAEYAgEynAF1nAGRAQIBMKUBDaUBpgECASquAaICrgHaAgIBJ7QBDcsBGAIBFs8Bdc8BkgECARTgAQ3kAR8CAQaCAQ+GASACATuHAQ+XAR8CATOlAXylAaMBAgErtQEPuQEgAgEfugEPygEfAgEX4AG7AeAB5AECAQniAUXiAVQCAQeCAdECggHUAgIBQoQBogGEAcEBAgFBggGFAYIBigECAUCCAUuCAVECAT+CAVyCAXACAT2CAckBggGNAgIBPIcBKIcBPAIBOY0BFZQBIAIBNLUB0QK1AdQCAgEmtwGiAbcBwQECASW1AYUBtQGKAQIBJLUBS7UBUQIBI7UBXLUBcAIBIbUByQG1AY0CAgEgugEougE8AgEdwAEVxwEgAgEYjgEXkwEmAgE1wQEXxgEmAgEZkAFMkAFWAgE3kgFAkgFcAgE2wwFMwwFWAgEbxQFAxQFcAgEa</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -240,7 +240,7 @@
       <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
       <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
       <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
-      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476.8,296" />
+      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476.8,188.8" />
       <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="476.8,60.8" />
       <sap2010:ViewStateData Id="LogMessage_2" sap:VirtualizedContainerService.HintSize="476.8,92.8" />
       <sap2010:ViewStateData Id="ExtractData_1" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
@@ -315,7 +315,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="476.8,281.6" />
       <sap2010:ViewStateData Id="LogMessage_5" sap:VirtualizedContainerService.HintSize="476.8,92.8" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="499.2,4231.2">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="499.2,4124">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -323,7 +323,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TicketPro_CreateQueue_1" sap:VirtualizedContainerService.HintSize="539.2,4311.2" />
+      <sap2010:ViewStateData Id="TicketPro_CreateQueue_1" sap:VirtualizedContainerService.HintSize="539.2,4204" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
