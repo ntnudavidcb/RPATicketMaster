@@ -130,7 +130,22 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element Home Screen" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2" WaitActive="False" WaitVisible="False">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Corner case where it navigates to the same folder, and it doesn't get sent to the home screen" ClickType="CLICK_SINGLE" DisplayName="Click 'Home Button'" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="57db033fc526e2d3b009383919540161" Selector="&lt;webctrl aaname='Home' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" sap2010:Annotation.AnnotationText="Wait until the home screen is loaded before starting a navigation" DisplayName="Find Element Home Screen" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2" WaitActive="False" WaitVisible="False">
               <ui:WaitUiElementAppear.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7b1579e98befa6e6ea865645cf12f1e2" Selector="&lt;webctrl aaname='Home*' tag='H2' /&gt;" WaitForReady="INTERACTIVE" />
               </ui:WaitUiElementAppear.Target>
@@ -140,7 +155,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <sads:DebugSymbol.Symbol>d1RDOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX05hdmlnYXRlLnhhbWwcAZYBAZwBAQMBbgFwAQJEA5ABDgIBAUUFjgEXAgECRZkCRdECAgEeSwuLARYCAQNMDVoYAgEcWw1b4gECARhcDX8WAgEKgAENhAEdAgEJhQENiQEmAgEHigENigG5AQIBBFigAViIAgIBHVt7W98BAgEZXFpcawIBC10PbRoCARNuD3kaAgEPeg9+JwIBDYcBoAGHAcsBAgEIigF8igG2AQIBBV4RYikCARZjEWchAgEVaBFsIQIBFG8RcykCARF0EXghAgEQetwBeogCAgEOXr0BXukBAgEXb9QBb4ACAgES</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1RDOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX05hdmlnYXRlLnhhbWweAZYBAZwBAQMBbgFwAQJEA58BDgIBAUUFnQEXAgECRZkCRdECAgEgSwuaARYCAQNMDVoYAgEeWw1b4gECARpcDX8WAgEMgAENhAEdAgELhQENkwEYAgEJlAENmAEmAgEHmQENmQG5AQIBBFigAViIAgIBH1t7W98BAgEbXFpcawIBDV0PbRoCARVuD3kaAgEReg9+JwIBD5EBoAGRAckBAgEKlgGgAZYBywECAQiZAXyZAbYBAgEFXhFiKQIBGGMRZyECARdoEWwhAgEWbxFzKQIBE3QReCECARJ63AF6iAICARBevQFe6QECARlv1AFvgAICARQ=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -168,17 +183,30 @@
       <sap2010:ViewStateData Id="InvokeWorkflowFile_3" sap:VirtualizedContainerService.HintSize="313.6,88" />
       <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476.8,187.2" />
       <sap2010:ViewStateData Id="SendHotkey_13" sap:VirtualizedContainerService.HintSize="476.8,116.8" />
-      <sap2010:ViewStateData Id="WaitUiElementAppear_2" sap:VirtualizedContainerService.HintSize="476.8,107.2" />
+      <sap2010:ViewStateData Id="Click_2" sap:VirtualizedContainerService.HintSize="476.8,151.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitUiElementAppear_2" sap:VirtualizedContainerService.HintSize="476.8,151.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="NavigateTo_1" sap:VirtualizedContainerService.HintSize="476.8,59.2" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="499.2,995.2">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="499.2,1230.4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="513.6,1142.4" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="536,1423.2">
+      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="513.6,1377.6" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="536,1658.4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,7 +214,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TicketPro_Navigate_1" sap:VirtualizedContainerService.HintSize="576,1703.2" />
+      <sap2010:ViewStateData Id="TicketPro_Navigate_1" sap:VirtualizedContainerService.HintSize="576,1778.4" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
