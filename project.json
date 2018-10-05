@@ -1,8 +1,8 @@
 {
-  "description": "Enhanced-REFramework Template",
+  "description": "UiPath_REFrameWork Template",
   "version": "2016.2.6274.33252",
   "main": "Main.xaml",
-  "id": "Enhanced-REFramework",
+  "id": "UiPath_REFrameWork",
   "dependencies": {},
   "configurationOptions": {},
   "excludedData": [
