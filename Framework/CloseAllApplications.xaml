@@ -57,12 +57,18 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Description: Here all working applications will be soft closed&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications closed" DisplayName="Normal App Closing Sequence" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="Closing applications..." />
-    <sads:DebugSymbol.Symbol>d3dDOlxVc2Vyc1xtaWhhaS5kdW5hcmVhbnVcR29vZ2xlIERyaXZlXFdvcmtzcGFjZVxVaVBhdGhcVGVtcGxhdGVzXFVpUGF0aF9SRUZyYW1ld29ya1xGcmFtZXdvcmtcQ2xvc2VBbGxBcHBsaWNhdGlvbnMueGFtbAM6Az0OAgEBOwU7jgECAQI7cjuLAQIBAw==</sads:DebugSymbol.Symbol>
+    <ui:CloseApplication ContinueOnError="True" DisplayName="Close application 'chrome.exe Chrome'" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+      <ui:CloseApplication.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="619fdbbfe4bec09d4bbe0bfb6f72fa9c" Selector="&lt;html app='chrome.exe' title='TicketPRO 2000' /&gt;" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+      </ui:CloseApplication.Target>
+    </ui:CloseApplication>
+    <sads:DebugSymbol.Symbol>d1ZDOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxGcmFtZXdvcmtcQ2xvc2VBbGxBcHBsaWNhdGlvbnMueGFtbAc6A0IOAgEBOwU7jgECAQY8BUAbAgECO3I7iwECAQc+gwE+uwECAQU+xgE+zAECAQQ8KjwwAgED</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="314.4,92.8" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="336.8,309.6">
+      <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="313.6,92.8" />
+      <sap2010:ViewStateData Id="CloseApplication_1" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="336,456.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -70,7 +76,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CloseAllApplications_1" sap:VirtualizedContainerService.HintSize="376.8,389.6" />
+      <sap2010:ViewStateData Id="CloseAllApplications_1" sap:VirtualizedContainerService.HintSize="376,536.8" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
