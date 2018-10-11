@@ -66,6 +66,11 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Preconditions: &#xA; - TicketPRO logged in&#xA;&#xA;Arguments:&#xA; - MenuItem (home, users, files, queue, archive)&#xA; - Department name (private (1), business (2), internal (3))&#xA;&#xA;Completion state:&#xA; - Department and foldermenu accessed" DisplayName="TicketPro_Navigate" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <If Condition="[in_Department &lt;&gt; 1 Or in_Department &lt;&gt; 2 Or in_Department &lt;&gt; 3]" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Throw Exception="[New BusinessRuleException(&quot;Invalid Department Number&quot;)]" sap2010:WorkflowViewState.IdRef="Throw_1" />
+      </If.Then>
+    </If>
     <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser TicketPRO" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1b2cd8f6ee1129fce7bcb2d9a077a8d7" Selector="&lt;html app='chrome.exe' title='TicketPRO 2000' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -155,10 +160,12 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <sads:DebugSymbol.Symbol>d1RDOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX05hdmlnYXRlLnhhbWweAZYBAZwBAQMBbgFwAQJEA58BDgIBAUUFnQEXAgECRZkCRdECAgEgSwuaARYCAQNMDVoYAgEeWw1b4gECARpcDX8WAgEMgAENhAEdAgELhQENkwEYAgEJlAENmAEmAgEHmQENmQG5AQIBBFigAViIAgIBH1t7W98BAgEbXFpcawIBDV0PbRoCARVuD3kaAgEReg9+JwIBD5EBoAGRAckBAgEKlgGgAZYBywECAQiZAXyZAbYBAgEFXhFiKQIBGGMRZyECARdoEWwhAgEWbxFzKQIBE3QReCECARJ63AF6iAICARBevQFe6QECARlv1AFvgAICARQ=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1RDOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX05hdmlnYXRlLnhhbWwiAZYBAZwBAQMBbgFwAQJEA6QBDgIBAUUFSQoCASFKBaIBFwIBAkUTRWcCASJHCUeLAQIBJkqZAkrRAgIBIFALnwEWAgEDRxpHXgIBJ1ENXxgCAR5gDWDiAQIBGmENhAEWAgEMhQENiQEdAgELigENmAEYAgEJmQENnQEmAgEHngENngG5AQIBBF2gAV2IAgIBH2B7YN8BAgEbYVphawIBDWIPchoCARVzD34aAgERfw+DAScCAQ+WAaABlgHJAQIBCpsBoAGbAcsBAgEIngF8ngG2AQIBBWMRZykCARhoEWwhAgEXbRFxIQIBFnQReCkCARN5EX0hAgESf9wBf4gCAgEQY70BY+kBAgEZdNQBdIACAgEU</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Throw_1" sap:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="513.6,211.2" />
       <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="476.8,107.2" />
       <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="476.8,92.8" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="313.6,88" />
@@ -206,7 +213,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="513.6,1377.6" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="536,1658.4">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="536,1909.6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -214,7 +221,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TicketPro_Navigate_1" sap:VirtualizedContainerService.HintSize="576,1778.4" />
+      <sap2010:ViewStateData Id="TicketPro_Navigate_1" sap:VirtualizedContainerService.HintSize="576,1989.6" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
