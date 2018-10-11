@@ -153,8 +153,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message box" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[out_NumberCompletedTickets.ToString]" TopMost="True" />
-    <sads:DebugSymbol.Symbol>d2VDOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX0NhbGN1bGF0ZUNvbXBsZXRlZFRpY2tldHMueGFtbCNKA54BDgIBAU04TVUCAQJPBWAQAgEgYQVoDgIBHGkFmwEVAgEGnAEFnAHTAQIBA1AHXxkCASFmL2YwAgEfYzBjTAIBHWkeaTICARpvC5gBFgIBB5wBmgGcAcEBAgEEUKICUNoCAgErVg1cGAIBInMNlwESAgEIVw9bIAIBI3Mbc1cCAQl1EZUBHAIBClfRAlfUAgIBKlmiAVnBAQIBKVeFAVeKAQIBKFdLV1ECASdXXFdwAgElV8kBV40CAgEkeROAARwCARaBAROIARwCARKJAROUARgCAQt+QH52AgEZe0F7SwIBF4YBQIYBhwECARWDAUGDAVACAROJASGJAY0BAgEMiwEXkgEgAgENkAFBkAFfAgEQjQFCjQFeAgEO</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2VDOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX0NhbGN1bGF0ZUNvbXBsZXRlZFRpY2tldHMueGFtbCFKA50BDgIBAU04TVUCAQJPBWAQAgEdYQVoDgIBGWkFmwEVAgEDUAdfGQIBHmYvZjACARxjMGNMAgEaaR5pMgIBF28LmAEWAgEEUKICUNoCAgEoVg1cGAIBH3MNlwESAgEFVw9bIAIBIHMbc1cCAQZ1EZUBHAIBB1fRAlfUAgIBJ1miAVnBAQIBJleFAVeKAQIBJVdLV1ECASRXXFdwAgEiV8kBV40CAgEheROAARwCAROBAROIARwCAQ+JAROUARgCAQh+QH52AgEWe0F7SwIBFIYBQIYBhwECARKDAUGDAVACARCJASGJAY0BAgEJiwEXkgEgAgEKkAFBkAFfAgENjQFCjQFeAgEL</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -195,8 +194,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEachRow_1" sap:VirtualizedContainerService.HintSize="664,961.6" />
-      <sap2010:ViewStateData Id="MessageBox_2" sap:VirtualizedContainerService.HintSize="664,59.2" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="686.4,1970.4">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="686.4,1871.2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -204,7 +202,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TicketPro_CalculateCompletedTickets_1" sap:VirtualizedContainerService.HintSize="726.4,3170.4" />
+      <sap2010:ViewStateData Id="TicketPro_CalculateCompletedTickets_1" sap:VirtualizedContainerService.HintSize="726.4,1951.2" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
