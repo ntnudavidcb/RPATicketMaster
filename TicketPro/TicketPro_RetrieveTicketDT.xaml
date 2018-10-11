@@ -95,7 +95,7 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <sads:DebugSymbol.Symbol>d1xDOlxVc2Vyc1xkY2hlbmJpbFxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX1JldHJpZXZlVGlja2V0RFQueGFtbBRHA2MOAgEBSAVNHQIBFk4FTvkBAgESTwVhEAIBAktES1ECARpKRUpUAgEYSLsBSN4BAgEXTnNO9gECARNQB2AZAgEDUKICUNoCAgERVg1dGAIBBFcPWyACAQlcD1yDAgIBBVfbAlfeAgIBEFmiAVnBAQIBD1eCAVeHAQIBDldLV1ECAQ1XXFdtAgELV9MBV5cCAgEKXH1cgAICAQY=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1xDOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX1JldHJpZXZlVGlja2V0RFQueGFtbBRHA2MOAgEBSAVNHQIBFk4FTvkBAgESTwVhEAIBAktES1ECARpKRUpUAgEYSLsBSN4BAgEXTnNO9gECARNQB2AZAgEDUKICUNoCAgERVg1dGAIBBFcPWyACAQlcD1yDAgIBBVfbAlfeAgIBEFmiAVnBAQIBD1eCAVeHAQIBDldLV1ECAQ1XXFdtAgELV9MBV5cCAgEKXH1cgAICAQY=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -126,7 +126,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="RetrieveActiveTickets_1" sap:VirtualizedContainerService.HintSize="499.2,976.8" />
+      <sap2010:ViewStateData Id="RetrieveActiveTickets_1" sap:VirtualizedContainerService.HintSize="499.2,1402.4" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
