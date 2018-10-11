@@ -1,0 +1,200 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="TicketPro_GenerateExcelReport"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Name" Type="InArgument(x:String)" />
+    <x:Property Name="in_Department" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>TicketPro_GenerateExcelReport_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Preconditions: &#xA; - None&#xA;&#xA;Arguments:&#xA;- TransactionItem (name)&#xA;- Department name (private (1), business (2), internal (3))&#xA;&#xA;Completion state:&#xA; - Excel report generated for specific employee" DisplayName="Generate Excel Report" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:QueueItem" Name="out_TransactionItem" />
+      <Variable x:TypeArguments="x:String" Name="Department" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ActiveTicketsDT" />
+      <Variable x:TypeArguments="x:Int32" Name="NumberExpiredTickets" />
+      <Variable x:TypeArguments="sd:DataTable" Name="CompletedTicketsDT" />
+      <Variable x:TypeArguments="x:Int32" Name="NumberCompletedTickets" />
+      <Variable x:TypeArguments="x:Int32" Name="NumberActiveTickets" />
+      <Variable x:TypeArguments="x:Double" Name="CompletionRate" />
+      <Variable x:TypeArguments="sd:DataTable" Name="EmployeeDT" />
+      <Variable x:TypeArguments="s:String[]" Name="EmployeeArray" />
+    </Sequence.Variables>
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch DepartmentToString" Expression="[in_Department]" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <Assign x:Key="1" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Department]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">private</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="2" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Department]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">business</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="3" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Department]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">internal</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Switch>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow RetrieveActiveTicketDT" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_RetrieveTicketDT.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_Department">[in_Department]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MenuItem">queue</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_TicketsDT">[ActiveTicketsDT]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow CalculateActiveTickets" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_CalculateActiveTickets.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_TicketsQueueDT">[ActiveTicketsDT]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Name">[in_Name]</InArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_NumberActiveTickets">[NumberActiveTickets]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow CalculateExpiredTickets" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_CalculateExpiredTickets.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_QueueTicketsDT">[ActiveTicketsDT]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Name">[in_Name]</InArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_numberExpiredTickets">[NumberExpiredTickets]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow RetrieveCompletedTicketsDT" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_RetrieveTicketDT.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_Department">[in_Department]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MenuItem">archive</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_TicketsDT">[CompletedTicketsDT]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow CalculateCompletedTickets" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_CalculateCompletedTickets.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_QueueTicketsDT">[CompletedTicketsDT]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Name">[in_Name]</InArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_NumberCompletedTickets">[NumberCompletedTickets]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow CalculateCompletionRate" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="TicketPro\TicketPro_CalculateCompletionRate.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_ActiveTickets">[NumberActiveTickets]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_ExpiredTickets">[NumberExpiredTickets]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_totalCompletedTickets">[NumberCompletedTickets]</InArgument>
+        <OutArgument x:TypeArguments="x:Double" x:Key="out_completionRate">[CompletionRate]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[EmployeeArray]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[{in_Name, NumberExpiredTickets.ToString, NumberActiveTickets.ToString, NumberCompletedTickets.ToString, CompletionRate.ToString+"%"}]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:BuildDataTable DataTable="[EmployeeDT]" DisplayName="Build Department Report Datatable" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Employee&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Expired&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Active&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Completed&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Completion_x0020_rate&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[EmployeeArray]" DataTable="[EmployeeDT]" DisplayName="Add data row" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+    <ui:AppendRange DataTable="[EmployeeDT]" DisplayName="Append range" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\snjablon\Documents\GitHub\RPATicketMaster\Data\TicketProReport_&quot;+Department+&quot;.xlsx&quot;]" />
+    <sads:DebugSymbol.Symbol>d19DOlxVc2Vyc1xzbmphYmxvblxEb2N1bWVudHNcR2l0SHViXFJQQVRpY2tldE1hc3RlclxUaWNrZXRQcm9cVGlja2V0UHJvX0dlbmVyYXRlRXhjZWxSZXBvcnQueGFtbDdHA6UBDgIBAVQFbQ4CAUluBXQdAgFCdQV7HQIBOnwFggEdAgEygwEFiQEdAgErigEFkAEdAgEjkQEFmAEdAgEZmQEFoAEOAgEQoQEFoQHzDAIBDaIBBaIBpwECAQijAQWjAZECAgECVFpUawIBSlUHXBACAVRdB2QQAgFQZQdsEAIBTHFEcUkCAUhyS3JcAgFGcEVwVAIBRG7DAW7uAQIBQ3dOd18CAUB5UHllAgE+dcMBdfQBAgE9eEB4SQIBO4ABUYABZwIBOH5Ofl8CATZ8xAF89gECATV/QH9JAgEzhgFEhgFLAgExhwFLhwFfAgEvhQFFhQFUAgEtgwHHAYMB8gECASyOAVOOAWsCASmMAU6MAWICASeKAcYBigH6AQIBJo0BQI0BSQIBJJYBTJYBXAIBIZUBUZUBaQIBH5QBSpQBYAIBHZEBxAGRAfYBAgEckwFJkwFeAgEangEyngG4AQIBE5sBM5sBQgIBEaEBIqEBMAIBDqIBTKIBWgIBC6IBMKIBQQIBCaMBH6MBLQIBBqMBgwGjAYsBAgEFowGZAaMBjgICAQNaMlo5AgFXVzNXPwIBVWIyYjoCAVNfM18/AgFRajJqOgIBT2czZz8CAU0=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
+      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476.8,188.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_5" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_6" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_3" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_4" sap:VirtualizedContainerService.HintSize="476.8,88" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="476.8,60.8" />
+      <sap2010:ViewStateData Id="BuildDataTable_2" sap:VirtualizedContainerService.HintSize="476.8,59.2" />
+      <sap2010:ViewStateData Id="AddDataRow_2" sap:VirtualizedContainerService.HintSize="313.6,22.4" />
+      <sap2010:ViewStateData Id="AppendRange_1" sap:VirtualizedContainerService.HintSize="313.6,115.2" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="499.2,1655.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="TicketPro_GenerateExcelReport_1" sap:VirtualizedContainerService.HintSize="539.2,1975.2" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
